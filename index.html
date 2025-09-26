@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from bozosol.web.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Sep 2025 23:31:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$BOZO - WE'RE ALL GONNA MAKE IT (maybe)</title>
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&amp;display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🤡</text></svg>") 16 0, auto;
+        }
+
+        body {
+            font-family: 'Comic Neue', 'Comic Sans MS', 'Chalkboard SE', 'Comic Relief', cursive;
+            background: repeating-linear-gradient(45deg, #ff9ce3, #83eeff 100px);
+            color: #333;
+            overflow-x: hidden;
+            animation: backgroundShift 10s infinite linear;
+        }
+
+        @keyframes backgroundShift {
+            0% { background-position: 0 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        .blink {
+            animation: blink 0.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        .cursor-blink {
+            display: inline-block;
+            width: 0.5em;
+            height: 1em;
+            background-color: black;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        .under-construction {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            transform: rotate(-15deg);
+            font-size: 30px;
+            color: yellow;
+            text-shadow: 2px 2px 0 red;
+            font-weight: bold;
+            z-index: 1000;
+            pointer-events: none;
+            animation: jiggle 2s infinite;
+        }
+
+        @keyframes jiggle {
+            0%, 100% { transform: rotate(-15deg); }
+            50% { transform: rotate(-20deg); }
+        }
+
+        .marquee {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            padding: 5px 0;
+            font-weight: bold;
+            z-index: 999;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0 20px;
+            position: relative;
+            margin-top: 2em;
+        }
+
+        .logo {
+            font-size: 6rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 3px 3px 0 #ff69b4, 6px 6px 0 #7a8cff, 9px 9px 0 black;
+            margin-bottom: 10px;
+            animation: rotate 5s infinite linear;
+            display: inline-block;
+            transform-origin: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px) rotateZ(-5deg); }
+            20%, 40%, 60%, 80% { transform: translateX(5px) rotateZ(5deg); }
+        }
+
+        .shake-element {
+            animation: shake 2s infinite;
+            display: inline-block;
+        }
+
+        .tagline {
+            font-size: 2rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px 20px;
+            border: 3px dashed #ff00ff;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 20px 0;
+            animation: shake 3s infinite;
+            transform-origin: center;
+        }
+
+        .rainbow-text {
+            animation: rainbow 1s infinite;
+            font-weight: bold;
+        }
+
+        @keyframes rainbow {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            56% { color: blue; }
+            70% { color: indigo; }
+            84% { color: violet; }
+            100% { color: red; }
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .bozo-main {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 30px;
+            animation: float 3s infinite ease-in-out;
+            border: 10px solid gold;
+            border-radius: 50%;
+            box-shadow: 0 0 30px gold;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .bozo-main:hover {
+            animation: spin 0.5s infinite linear;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.5); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+
+        .bozo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .bozo-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            filter: saturate(150%);
+        }
+
+        .bozo-img:hover {
+            transform: scale(2) rotate(15deg);
+            z-index: 100;
+            position: relative;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff0000, #ff7700, #ffff00, #77ff00, #0000ff, #7700ff, #ff00ff, #ff0000);
+            background-size: 800% 800%;
+            animation: rainbowAnimation 8s ease infinite;
+            color: white;
+            border: 5px solid black;
+            padding: 20px 40px;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 20px;
+            text-transform: uppercase;
+            box-shadow: 0 8px 0 black;
+            text-shadow: 2px 2px 0 black;
+            position: relative;
+            overflow: hidden;
+            transform: perspective(100px) rotateX(10deg);
+        }
+
+        @keyframes rainbowAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .cta-button:hover {
+            animation: shake 0.5s infinite, rainbowAnimation 8s ease infinite;
+            transform: perspective(100px) rotateX(10deg) scale(1.1);
+        }
+
+        .cta-button:active {
+            transform: perspective(100px) rotateX(10deg) translateY(8px);
+            box-shadow: 0 0 0 black;
+        }
+
+        .tokenomics {
+            background: url('api/placeholder/800/400.html') center/cover;
+            position: relative;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: 10px solid rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+        }
+
+        .tokenomics:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: 0;
+        }
+
+        .tokenomics h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #ff4081;
+            position: relative;
+            z-index: 1;
+            animation: pulse 2s infinite;
+            text-shadow: 3px 3px 0 yellow;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .tokenomics-list {
+            list-style: none;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            border: 3px dashed #ff00ff;
+            font-size: 1.5rem;
+        }
+
+        .tokenomics-list li {
+            padding: 15px 0;
+            font-size: 1.5rem;
+            border-bottom: 3px dashed #ff00ff;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .tokenomics-list li:last-child {
+            border-bottom: none;
+        }
+
+        .tokenomics-list li:before {
+            content: "🤪 ";
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            margin: 40px auto;
+            background-color: white;
+            border: 5px solid black;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .chart-line {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            animation: chartAnimation 3s infinite;
+        }
+
+        @keyframes chartAnimation {
+            0% { transform: translate(0, 0); }
+            10% { transform: translate(40px, -20px); }
+            20% { transform: translate(80px, 30px); }
+            30% { transform: translate(120px, -40px); }
+            40% { transform: translate(160px, 20px); }
+            50% { transform: translate(200px, -60px); }
+            60% { transform: translate(240px, 10px); }
+            70% { transform: translate(280px, -30px); }
+            80% { transform: translate(320px, 50px); }
+            90% { transform: translate(400px, -80px); }
+            100% { transform: translate(500px, -200px); }
+        }
+
+        .chart-title {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .chart-x-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .chart-y-label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: rotate(-90deg) translateX(-50%);
+            transform-origin: left center;
+        }
+
+        .roadmap {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+        }
+
+        .roadmap:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 100%;
+            background: repeating-linear-gradient(45deg, #ff00ff, #ff00ff 10px, #ffff00 10px, #ffff00 20px);
+            z-index: 0;
+        }
+
+        .roadmap h2 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: #7986cb;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            background-color: #ffff00;
+            padding: 10px 20px;
+            border: 5px solid black;
+            border-radius: 10px;
+            transform: rotate(-5deg);
+            animation: shake 2s infinite;
+        }
+
+        .phase {
+            background-color: white;
+            position: relative;
+            z-index: 1;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px auto;
+            max-width: 800px;
+            border: 5px solid black;
+            box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
+            transform: rotate(2deg);
+        }
+
+        .phase:nth-child(odd) {
+            transform: rotate(-2deg);
+        }
+
+        .phase:hover {
+            animation: shake 0.5s infinite;
+        }
+
+        .phase h3 {
+            font-size: 2.5rem;
+            color: #ff4081;
+            margin-bottom: 15px;
+            text-decoration: underline wavy #ffff00;
+        }
+
+        .phase-list {
+            list-style: none;
+            text-align: left;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .phase-list li {
+            padding: 12px 0;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px dotted #ccc;
+        }
+
+        .phase-list li:before {
+            content: "🚀 ";
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .community {
+            text-align: center;
+            padding: 40px 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            margin: 40px 0;
+            border: 10px dashed #00ffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .community:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-conic-gradient(rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 5%, rgba(255,255,255,0.1) 10%);
+            animation: rotate 20s linear infinite;
+            z-index: 0;
+        }
+
+        .community h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #7e57c2;
+            position: relative;
+            z-index: 1;
+            text-shadow: 3px 3px 0 yellow;
+        }
+
+        .community p {
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-icon {
+            font-size: 3rem;
+            color: white;
+            background: linear-gradient(45deg, #ff0000, #ff7700, #ffff00, #77ff00, #0000ff, #7700ff, #ff00ff);
+            background-size: 800% 800%;
+            animation: rainbowAnimation 8s ease infinite;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            border: 5px solid black;
+            box-shadow: 5px 5px 0 black;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-10px) rotate(10deg) scale(1.2);
+            box-shadow: 8px 8px 0 black;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 40px;
+            color: white;
+            position: relative;
+            border-top: 10px solid #ff00ff;
+        }
+
+        footer p {
+            position: relative;
+            z-index: 1;
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .ticker-container {
+            overflow: hidden;
+            background-color: #ff00ff;
+            padding: 15px 0;
+            margin: 30px 0;
+            border-top: 5px solid black;
+            border-bottom: 5px solid black;
+        }
+
+        .ticker {
+            white-space: nowrap;
+            animation: ticker 15s linear infinite;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 0 black;
+        }
+
+        @keyframes ticker {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .bozo-army {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 15px solid gold;
+        }
+
+        .bozo-army img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: pulse 5s infinite;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .overlay h2 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0 #ff00ff, 6px 6px 0 black;
+            animation: shake 2s infinite;
+        }
+
+        .overlay p {
+            font-size: 2rem;
+            max-width: 800px;
+            text-shadow: 2px 2px 0 black;
+        }
+
+        .price-display {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff0000, #ff00ff);
+            padding: 20px 40px;
+            border-radius: 20px;
+            margin: 20px 0;
+            display: inline-block;
+            animation: shake 2s infinite, glow 2s infinite alternate;
+            color: white;
+            text-shadow: 2px 2px 0 black;
+            border: 5px solid black;
+            transform: rotate(-5deg);
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px #ff4081, 0 0 40px #ff4081;
+            }
+            to {
+                box-shadow: 0 0 40px #ff4081, 0 0 80px #ff4081;
+            }
+        }
+
+        .counter {
+            font-size: 2rem;
+            margin: 20px 0;
+            background-color: #ffff00;
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: inline-block;
+            border: 5px solid black;
+            animation: shake 2s infinite;
+            box-shadow: 5px 5px 0 black;
+        }
+
+        .bozo-counter {
+            font-weight: bold;
+            color: #ff00ff;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 0 black;
+        }
+
+        .degeneracy-meter {
+            width: 300px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 15px;
+            margin: 20px auto;
+            overflow: hidden;
+            border: 3px solid black;
+            position: relative;
+        }
+
+        .degeneracy-fill {
+            height: 100%;
+            width: 10%;
+            background: linear-gradient(90deg, green, yellow, red);
+            transition: width 0.5s;
+        }
+
+        .degeneracy-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            color: black;
+            text-shadow: 1px 1px 0 white;
+            font-size: 1rem;
+        }
+
+        .wen-lambo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffff00;
+            color: black;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            animation: pulse 1s infinite;
+            border: 3px solid black;
+            font-size: 1.5rem;
+            z-index: 999;
+            box-shadow: 5px 5px 0 black;
+        }
+
+        .wen-lambo:hover {
+            animation: shake 0.5s infinite;
+        }
+
+        .laser-eyes {
+            position: absolute;
+            width: 300px;
+            height: 50px;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .laser {
+            position: absolute;
+            height: 5px;
+            background-color: red;
+            top: 0;
+        }
+
+        .laser.left {
+            left: 70px;
+            width: 80px;
+            transform: rotate(-30deg);
+            box-shadow: 0 0 10px 2px red;
+        }
+
+        .laser.right {
+            right: 70px;
+            width: 80px;
+            transform: rotate(30deg);
+            box-shadow: 0 0 10px 2px red;
+        }
+
+        .secret-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .hodl-mode {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background-color: #ff00ff;
+            color: white;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 5px solid black;
+            box-shadow: 5px 5px 0 black;
+            z-index: 999;
+            font-size: 1.5rem;
+            transform: rotate(15deg);
+        }
+
+        .hodl-mode:hover {
+            animation: spin 1s infinite linear;
+        }
+
+        .meme-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0;
+        }
+
+        .meme {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            animation: fall linear;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg); }
+            100% { transform: translateY(calc(100vh + 100px)) rotate(360deg); }
+        }
+
+        .diamond-hands {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            font-size: 3rem;
+            background-color: #00ffff;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            animation: pulse 1s infinite;
+            cursor: pointer;
+            z-index: 999;
+            border: 3px solid black;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 40px;
+            background-color: #ccc;
+            border-radius: 20px;
+            margin: 20px 0;
+            overflow: hidden;
+            border: 3px solid black;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            width: 0%;
+            animation: progressAnimation 10s infinite;
+        }
+
+        @keyframes progressAnimation {
+            0% { width: 0%; }
+            50% { width: 100%; }
+            100% { width: 0%; }
+        }
+
+        .progress-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            color: black;
+            text-shadow: 1px 1px 0 white;
+        }
+
+        .spinning-text {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 40px auto;
+        }
+
+        .spinning-circle {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: spin 10s linear infinite;
+        }
+
+        .spinning-text span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 50%;
+            top: 0;
+            transform-origin: 0 150px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 3.5rem;
+            }
+
+            .bozo-main {
+                width: 200px;
+                height: 200px;
+            }
+
+            .bozo-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .overlay h2 {
+                font-size: 2rem;
+            }
+
+            .overlay p {
+                font-size: 1.2rem;
+            }
+
+            .cta-button {
+                font-size: 1.5rem;
+                padding: 15px 30px;
+            }
+
+            .phase h3 {
+                font-size: 2rem;
+            }
+
+            .phase-list li {
+                font-size: 1.2rem;
+            }
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .dancing-bozo {
+            position: fixed;
+            bottom: -50px;
+            right: 20px;
+            width: 150px;
+            height: 150px;
+            z-index: 1000;
+            cursor: pointer;
+            transition: bottom 0.5s ease;
+            animation: dance 3s infinite;
+        }
+
+        @keyframes dance {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            25% { transform: translateY(-20px) rotate(-10deg); }
+            50% { transform: translateY(0) rotate(0); }
+            75% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .dancing-bozo:hover {
+            bottom: 0;
+            animation: spin 0.5s infinite linear;
+        }
+
+        .glitch-text {
+            position: relative;
+            animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-5px, 5px); }
+            40% { transform: translate(-5px, -5px); }
+            60% { transform: translate(5px, 5px); }
+            80% { transform: translate(5px, -5px); }
+            100% { transform: translate(0); }
+        }
+
+        .glitch-text:before,
+        .glitch-text:after {
+            content: 'BOZO COIN';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch-text:before {
+            left: 2px;
+            text-shadow: -1px 0 red;
+            animation: glitch-anim 2s infinite linear alternate-reverse;
+        }
+
+        .glitch-text:after {
+            left: -2px;
+            text-shadow: 1px 0 blue;
+            animation: glitch-anim 1s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip-path: inset(40% 0 61% 0); }
+            20% { clip-path: inset(92% 0 1% 0); }
+            40% { clip-path: inset(43% 0 1% 0); }
+            60% { clip-path: inset(25% 0 58% 0); }
+            80% { clip-path: inset(54% 0 7% 0); }
+            100% { clip-path: inset(58% 0 43% 0); }
+        }
+
+        .hotline {
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            animation: blink 1s infinite;
+            z-index: 999;
+            border: 3px solid white;
+            box-shadow: 0 0 10px red;
+        }
+
+        .nfa {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            background-color: yellow;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            transform: rotate(-10deg);
+            z-index: 999;
+            border: 2px solid black;
+        }
+
+        .money-printer {
+            position: fixed;
+            top: 200px;
+            left: -150px;
+            width: 150px;
+            height: 100px;
+            background-color: green;
+            border: 3px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: all 0.5s;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        .money-printer:hover {
+            left: 0;
+        }
+
+        .money-printer:after {
+            content: 'BRRR';
+            position: absolute;
+            right: -60px;
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 0 10px 10px 0;
+            border: 3px solid black;
+            border-left: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="marquee">
+        <div class="marquee-content">
+            🚨 NOT FINANCIAL ADVICE 🚨 DYOR 🚨 APE AT YOUR OWN RISK 🚨 WE HAVE NO IDEA WHAT WE'RE DOING 🚨 PROBABLY GOING TO ZERO 🚨 OR THE MOON 🚨 WE LITERALLY DON'T KNOW 🚨 100000X IMMINENT 🚨 TRUST ME BRO 🚨
+        </div>
+    </div>
+
+    <div class="nfa">NOT FINANCIAL ADVICE</div>
+    <div class="under-construction">UNDER CONSTRUCTION</div>
+    <div class="hodl-mode" id="hodl-mode">HODL MODE</div>
+    <img src="api/bozo/bozomain.jpg" alt="Dancing Bozo" class="dancing-bozo" id="dancingBozo">
+    <div class="diamond-hands" id="diamond-hands">💎👐</div>
+    <div class="wen-lambo" id="wen-lambo">WEN LAMBO?</div>
+    <div class="hotline">BOZO SUPPORT HOTLINE</div>
+    <div class="money-printer" id="money-printer">MINT $BOZO</div>
+
+    <button class="secret-button" id="secret-button"></button>
+    <div class="meme-rain" id="meme-rain"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo glitch-text">BOZO COIN</div>
+            <div class="tagline"><span class="shake-element">We are BOZO</span>... <span class="rainbow-text blink">we have no idea what we're doing!</span></div>
+            <div class="price-display">1 BOZO = <span class="rainbow-text" id="price-display">???</span> USD</div>
+            <div class="degeneracy-meter">
+                <div class="degeneracy-fill" id="degeneracy-fill"></div>
+                <div class="degeneracy-label">DEGENERACY LEVEL: <span id="degeneracy-level">10%</span></div>
+            </div>
+        </header>
+
+        <div class="hero">
+            <img src="api/bozo/bozo4.jpg" alt="Bozo Character" class="bozo-main" id="bozo-main">
+            <div class="laser-eyes" id="laser-eyes">
+                <div class="laser left"></div>
+                <div class="laser right"></div>
+            </div>
+            <h1 class="rainbow-text" style="font-size: 3rem; margin-bottom: 20px;">Join the <span class="shake-element">$BOZO</span> Revolution!</h1>
+            <p style="font-size: 1.5rem; margin-bottom: 20px;">The first memecoin created by complete <span class="blink rainbow-text">RETARDS</span>, for complete <span class="blink rainbow-text">RETARDS</span>!</p>
+            <div class="counter">BOZOs collected: <span class="bozo-counter" id="bozo-counter">0</span></div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+                <div class="progress-label">LOADING BOZO ROCKET... PLEASE WAIT</div>
+            </div>
+            <div>
+                <button class="cta-button" id="buy-btn">APE IN NOW!!!</button>
+                <button class="cta-button" id="collect-btn">COLLECT BOZO</button>
+            </div>
+        </div>
+
+        <div class="ticker-container">
+            <div class="ticker">
+                🚀 $BOZO UP 42069% TODAY * ELON BOUGHT $BOZO * EXCHANGES BEGGING TO LIST $BOZO * WEN BINANCE SER * DIAMOND HANDS ONLY * PAPER HANDS NGMI * $BOZO FLIPPED BITCOIN * TRUST ME BRO * WE HAVE NO IDEA WHAT WE'RE DOING AND THAT'S THE POINT * WAGMI * $BOZO TO THE MOON * LAMBO WHEN *
+            </div>
+        </div>
+
+        <div class="bozo-container" id="bozo-gallery">
+            <img src="api/bozo/bozo1.jpg" alt="Moon Bozo" class="bozo-img">
+            <img src="api/bozo/bozo2.jpg" alt="Lambo Bozo" class="bozo-img">
+            <img src="api/bozo/bozo3.jpg" alt="Bozo" class="bozo-img">
+            <img src="api/bozo/bozo5.jpg" alt="Bozo" class="bozo-img">
+            <img src="api/bozo/bozo6.jpg" alt="Bozo" class="bozo-img">
+            <img src="api/bozo/bozo7.jpg" alt="Bozo" class="bozo-img">
+        </div>
+
+        <div class="tokenomics">
+            <h2>BOZO-nomics</h2>
+            <ul class="tokenomics-list">
+                <li>Total Supply: 1,000,000,000 $BOZO</li>
+                <li>Team Allocation: 0% (what team we are all $BOZO)</li>
+                <li>Burning Mechanism: We accidentally burned 90% already</li>
+                <li>Taxes: 420% buy tax, 69% sell tax (we're terrible at math)</li>
+                <li>Liquidity: Locked until the heat death of the universe</li>
+                <li>Whitepaper: What's a whitepaper? We have crayon drawings</li>
+            </ul>
+
+            <div class="chart-container">
+                <div class="chart-title">$BOZO Price Chart</div>
+                <div class="chart-line"></div>
+                <div class="chart-x-label">TIME (we don't understand it)</div>
+                <div class="chart-y-label">PRICE (only goes up)</div>
+            </div>
+        </div>
+
+        <div class="bozo-army">
+            <img src="api/bozo/600/400.html" alt="Bozo Army" id="bozo-army-img">
+            <div class="overlay">
+                <h2>JOIN THE BOZO ARMY</h2>
+                <p>We are growing stronger every day, even though we have absolutely no clue what we're doing!</p>
+            </div>
+        </div>
+
+        <div class="roadmap">
+            <h2>The BOZO "Roadmap"</h2>
+
+            <div class="phase">
+                <h3>Phase 1: BOZO BIRTH</h3>
+                <ul class="phase-list">
+                    <li>Create a token accidentally (DONE)</li>
+                    <li>Forget to renounce ownership (DONE)</li>
+                    <li>Build a community of fellow degens (ONGOING)</li>
+                    <li>Make a website by randomly slapping keyboard (YOU ARE HERE)</li>
+                    <li>Get rugged by our own incompetence (COMING SOON)</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h3>Phase 2: BOZO BREAKOUT</h3>
+                <ul class="phase-list">
+                    <li>List on exchanges (if they accept crayon signatures)</li>
+                    <li>Create BOZO NFTs that look exactly like our profile pics</li>
+                    <li>Launch BOZO merch (T-shirts that say "I'm with BOZO" and an arrow)</li>
+                    <li>Get banned from Twitter for excessive emojis</li>
+                    <li>BOZO DAO where all votes are "yes" or "YOLO"</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h3>Phase 3: BOZO SUPREMACY</h3>
+                <ul class="phase-list">
+                    <li>$BOZO becomes global reserve currency without trying</li>
+                    <li>Accidentally solve global warming by being too lazy to pollute</li>
+                    <li>BOZO metaverse where everything is upside down</li>
+                    <li>First BOZO astronaut to moon (we'll just photoshop it)</li>
+                    <li>Everyone admits they're a BOZO and world peace happens</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="community">
+            <h2>Join the BOZO Community</h2>
+            <p>Connect with fellow BOZOS who also have no idea what they're doing!</p>
+
+            <div class="social-icons">
+                <div class="social-icon"><a href="https://x.com/i/communities/1968876602626031821" target ="_blank">𝕏</a></div>
+                <div class="social-icon"><a href="https://dexscreener.com/solana/56sd1h81p6qajvumvxgnbrazfwsjpvzgp1df8shz4rzx" target ="_blank">D</a></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 BOZO COIN. No rights reserved because we don't know how to do that.</p>
+            <p><span class="rainbow-text">This is NOT financial advice. If you take financial advice from a website with Comic Sans and rainbow text, you truly are a BOZO.</span></p>
+            <p><small>Seriously though, this is a meme. Don't invest your life savings. Or do. We're not your financial advisor.</small></p>
+        </footer>
+    </div>
+
+    <script>
+        // Confetti effect
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let confetti = [];
+
+        function createConfetti() {
+            const colors = ['#ff4081', '#7e57c2', '#2196f3', '#26c6da', '#ffc107', '#ff0000', '#00ff00', '#0000ff'];
+
+            for (let i = 0; i < 200; i++) {
+                confetti.push({
+                    x: Math.random() * canvas.width,
+                    y: -Math.random() * canvas.height,
+                    size: Math.random() * 15 + 5,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    speed: Math.random() * 5 + 1,
+                    angle: Math.random() * 6.28,
+                    rotation: Math.random() * 0.2 - 0.1,
+                    rotationSpeed: Math.random() * 0.01 - 0.005
+                });
+            }
+        }
+
+        function drawConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            confetti.forEach((c, index) => {
+                ctx.save();
+                ctx.translate(c.x, c.y);
+                ctx.rotate(c.angle);
+                ctx.fillStyle = c.color;
+                ctx.fillRect(-c.size / 2, -c.size / 2, c.size, c.size);
+                ctx.restore();
+
+                c.y += c.speed;
+                c.angle += c.rotationSpeed;
+
+                if (c.y > canvas.height) {
+                    confetti.splice(index, 1);
+                }
+            });
+
+            if (confetti.length < 50) {
+                createConfetti();
+            }
+
+            requestAnimationFrame(drawConfetti);
+        }
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Bozo counter and degeneracy meter
+        let bozoCount = 0;
+        let degeneracyLevel = 10;
+        const bozoCounter = document.getElementById('bozo-counter');
+        const collectBtn = document.getElementById('collect-btn');
+        const degeneracyFill = document.getElementById('degeneracy-fill');
+        const degeneracyLevelText = document.getElementById('degeneracy-level');
+
+        collectBtn.addEventListener('click', () => {
+            bozoCount++;
+            bozoCounter.textContent = bozoCount;
+
+            // Increase degeneracy
+            degeneracyLevel = Math.min(100, degeneracyLevel + 5);
+            degeneracyFill.style.width = degeneracyLevel + '%';
+            degeneracyLevelText.textContent = degeneracyLevel + '%';
+
+            if (degeneracyLevel >= 100) {
+                activateMemeRain();
+            }
+
+            if (bozoCount % 5 === 0) {
+                createConfetti();
+            }
+
+            // Add a new Bozo image when collected
+            if (bozoCount % 3 === 0) {
+                const gallery = document.getElementById('bozo-gallery');
+                const newBozo = document.createElement('img');
+                newBozo.src = 'api/bozo/index.html';
+                newBozo.alt = 'New Bozo';
+                newBozo.className = 'bozo-img';
+                gallery.appendChild(newBozo);
+            }
+
+            // Activate laser eyes occasionally
+            if (bozoCount % 10 === 0) {
+                activateLaserEyes();
+            }
+        });
+
+        // Laser eyes effect
+        function activateLaserEyes() {
+            const laserEyes = document.getElementById('laser-eyes');
+            laserEyes.style.opacity = '1';
+
+            setTimeout(() => {
+                laserEyes.style.opacity = '0';
+            }, 2000);
+        }
+
+        // Buy button alert
+        const buyBtn = document.getElementById('buy-btn');
+        buyBtn.addEventListener('click', () => {
+            // Increase degeneracy
+            degeneracyLevel = Math.min(100, degeneracyLevel + 20);
+            degeneracyFill.style.width = degeneracyLevel + '%';
+            degeneracyLevelText.textContent = degeneracyLevel + '%';
+
+            createConfetti();
+
+            // Random funny alerts
+            const messages = [
+                "CONGRATULATIONS! You just tried to buy BOZO! Unfortunately, we spent the dev wallet on pizza and can't process your order.",
+                "APE SUCCESSFUL! Just kidding, we have no idea what 'aping' means. Was that a compliment?",
+                "BREAKING: Your financial advisor just quit. Something about 'irresponsible decisions'.",
+                "WHALE ALERT! Just kidding, you're more like a minnow, but we appreciate you!",
+                "LAMBO ORDER PENDING... Processing... Error: Not enough brain cells found.",
+                "TRANSACTION SUCCESSFUL! Wait, what transaction? We don't even have a smart contract."
+            ];
+
+            alert(messages[Math.floor(Math.random() * messages.length)]);
+
+            if (degeneracyLevel >= 100) {
+                activateMemeRain();
+            }
+        });
+
+        // Dancing Bozo with upgraded effect
+        const dancingBozo = document.getElementById('dancingBozo');
+        dancingBozo.addEventListener('click', () => {
+            // Increase degeneracy
+            degeneracyLevel = Math.min(100, degeneracyLevel + 10);
+            degeneracyFill.style.width = degeneracyLevel + '%';
+            degeneracyLevelText.textContent = degeneracyLevel + '%';
+
+            dancingBozo.style.animation = 'spin 0.5s infinite linear';
+            createConfetti();
+
+            alert("SECRET BOZO ACTIVATED! You earned 1000 BOZO tokens! (Note: BOZO tokens have no value and don't actually exist)");
+
+            setTimeout(() => {
+                dancingBozo.style.animation = 'dance 3s infinite';
+            }, 3000);
+
+            if (degeneracyLevel >= 100) {
+                activateMemeRain();
+            }
+        });
+
+        // Main Bozo animation with enhanced effects
+        const mainBozo = document.getElementById('bozo-main');
+        mainBozo.addEventListener('click', () => {
+            mainBozo.style.animation = 'spin 1s infinite linear';
+
+            // Increase degeneracy
+            degeneracyLevel = Math.min(100, degeneracyLevel + 15);
+            degeneracyFill.style.width = degeneracyLevel + '%';
+            degeneracyLevelText.textContent = degeneracyLevel + '%';
+
+            bozoCount += 25;
+            bozoCounter.textContent = bozoCount;
+            createConfetti();
+
+            setTimeout(() => {
+                mainBozo.style.animation = 'float 3s infinite ease-in-out';
+            }, 3000);
+
+            if (degeneracyLevel >= 100) {
+                activateMemeRain();
+            }
+        });
+
+        // Random price generator with more absurd values
+        const priceDisplay = document.getElementById('price-display');
+
+        function updatePrice() {
+            const action = Math.random() > 0.5 ? 'pump' : 'dump';
+            let price;
+
+            if (action === 'pump') {
+                // Generate absurdly high prices occasionally
+                if (Math.random() > 0.8) {
+                    price = ' + (Math.random() * 1000000).toFixed(2);
+                } else {
+                    price = '$0.' + '0'.repeat(Math.floor(Math.random() * 10)) + (Math.floor(Math.random() * 9) + 1) + (Math.floor(Math.random() * 9) + 1);
+                }
+            } else {
+                // Sometimes show negative prices for comedic effect
+                if (Math.random() > 0.8) {
+                    price = '- + (Math.random() * 0.1).toFixed(8);
+                } else {
+                    price = '$0.' + '0'.repeat(Math.floor(Math.random() * 10)) + (Math.floor(Math.random() * 9) + 1);
+                }
+            }
+
+            priceDisplay.textContent = price;
+        }
+
+        setInterval(updatePrice, 1500);
+
+        // Wen Lambo
+        const wenLambo = document.getElementById('wen-lambo');
+        wenLambo.addEventListener('click', () => {
+            alert("LAMBO ETA: When $BOZO reaches $1... So maybe next week, maybe never. Probably never.");
+
+            // Increase degeneracy
+            degeneracyLevel = Math.min(100, degeneracyLevel + 10);
+            degeneracyFill.style.width = degeneracyLevel + '%';
+            degeneracyLevelText.textContent = degeneracyLevel + '%';
+
+            createConfetti();
+
+            if (degeneracyLevel >= 100) {
+                activateMemeRain();
+            }
+        });
+
+        // HODL Mode
+        const hodlMode = document.getElementById('hodl-mode');
+        let hodlActivated = false;
+
+        hodlMode.addEventListener('click', () => {
+            hodlActivated = !hodlActivated;
+
+            if (hodlActivated) {
+                document.body.style.filter = 'hue-rotate(360deg) saturate(200%)';
+                hodlMode.textContent = 'HODL ON!';
+                hodlMode.style.backgroundColor = '#00ff00';
+                createConfetti();
+
+                // Increase degeneracy
+                degeneracyLevel = Math.min(100, degeneracyLevel + 20);
+                degeneracyFill.style.width = degeneracyLevel + '%';
+                degeneracyLevelText.textContent = degeneracyLevel + '%';
+
+                alert("HODL MODE ACTIVATED! Your hands have turned to diamond! You are now physically unable to sell $BOZO!");
+            } else {
+                document.body.style.filter = 'none';
+                hodlMode.textContent = 'HODL MODE';
+                hodlMode.style.backgroundColor = '#ff00ff';
+
+                alert("HODL MODE DEACTIVATED! Paper hands detected... NGMI");
+            }
+
+            if (degeneracyLevel >= 100) {
+                activateMemeRain();
+            }
+        });
+
+        // Diamond Hands
+        const diamondHands = document.getElementById('diamond-hands');
+
+        diamondHands.addEventListener('click', () => {
+            alert("DIAMOND HANDS CONFIRMED! You're officially in the BOZO Hall of Fame!");
+
+            // Increase degeneracy
+            degeneracyLevel = Math.min(100, degeneracyLevel + 15);
+            degeneracyFill.style.width = degeneracyLevel + '%';
+            degeneracyLevelText.textContent = degeneracyLevel + '%';
+
+            diamondHands.style.animation = 'spin 1s infinite linear';
+            createConfetti();
+
+            setTimeout(() => {
+                diamondHands.style.animation = 'pulse 1s infinite';
+            }, 3000);
+
+            if (degeneracyLevel >= 100) {
+                activateMemeRain();
+            }
+        });
+
+        // Secret button for meme rain
+        const secretButton = document.getElementById('secret-button');
+
+        secretButton.addEventListener('click', () => {
+            activateMemeRain();
+        });
+
+        // Meme rain
+        function activateMemeRain() {
+            const memeRain = document.getElementById('meme-rain');
+            memeRain.style.opacity = '1';
+
+            // Clear existing memes
+            memeRain.innerHTML = '';
+
+            // Create 20 falling memes
+            for (let i = 0; i < 20; i++) {
+                const meme = document.createElement('img');
+                meme.src = 'api/placeholder/100/100.html';
+                meme.className = 'meme';
+                meme.style.left = (Math.random() * 100) + 'vw';
+
+                // Random animation duration between 3-8 seconds
+                const duration = 3 + Math.random() * 5;
+                meme.style.animationDuration = duration + 's';
+
+                // Add to container
+                memeRain.appendChild(meme);
+            }
+
+            // Hide after 5 seconds
+            setTimeout(() => {
+                memeRain.style.opacity = '0';
+            }, 5000);
+        }
+
+        // Money printer
+        const moneyPrinter = document.getElementById('money-printer');
+
+        moneyPrinter.addEventListener('click', () => {
+            alert("BRRRRRRRRR! You just minted 1,000,000,000 $BOZO! (Note: This has diluted the supply and made everyone's $BOZO worthless)");
+
+            // Increase degeneracy to max
+            degeneracyLevel = 100;
+            degeneracyFill.style.width = degeneracyLevel + '%';
+            degeneracyLevelText.textContent = degeneracyLevel + '%';
+
+            createConfetti();
+            activateMemeRain();
+        });
+
+        // Initialize
+        createConfetti();
+        drawConfetti();
+        updatePrice();
+    </script>
+</body>
+
+<!-- Mirrored from bozosol.web.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Sep 2025 23:31:58 GMT -->
+</html>
